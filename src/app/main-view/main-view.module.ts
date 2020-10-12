@@ -9,11 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { BestHeroComponent } from './best-hero/best-hero.component';
 import { MatCardModule } from '@angular/material/card';
+import { WebHeroesService } from '../services/web-heroes.service';
+import { AllHeroesComponent } from './all-heroes/all-heroes.component';
 
 
 
 @NgModule({
-  declarations: [MainNavComponent, BestHeroComponent],
+  declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -23,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatCardModule
-  ]
+  ],
+  providers: [WebHeroesService]
 })
 export class MainViewModule { }

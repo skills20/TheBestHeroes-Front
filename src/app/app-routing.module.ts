@@ -1,17 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainNavComponent } from './main-view/main-nav/main-nav.component';
-import { BestHeroComponent } from './main-view/best-hero/best-hero.component'
-
+import { BestHeroComponent } from './main-view/best-hero/best-hero.component';
+import { AllHeroesComponent } from './main-view/all-heroes/all-heroes.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: BestHeroComponent
+    redirectTo: '/theBestHero',
+    pathMatch: 'full'
   },
   {
     path: 'theBestHero',
     component: BestHeroComponent
+  },
+  {
+    path: 'allHeroes',
+    component: AllHeroesComponent
   }
 ];
 
