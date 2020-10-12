@@ -17,4 +17,7 @@ export class WebHeroesService {
   getHero(): Observable<any> {
     return this.http.get<any>(`http://localhost:3000/theBestHero`);
   }
+  getHeroes(): Observable<any> {
+    return this.http.get<any>(`http://localhost:3000/allHeroes`);
+  }
 }

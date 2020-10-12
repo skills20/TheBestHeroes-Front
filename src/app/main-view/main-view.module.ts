@@ -11,8 +11,7 @@ import { BestHeroComponent } from './best-hero/best-hero.component';
 import { MatCardModule } from '@angular/material/card';
 import { WebHeroesService } from '../services/web-heroes.service';
 import { AllHeroesComponent } from './all-heroes/all-heroes.component';
-
-
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent],
@@ -24,7 +23,8 @@ import { AllHeroesComponent } from './all-heroes/all-heroes.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ],
   providers: [WebHeroesService]
 })
