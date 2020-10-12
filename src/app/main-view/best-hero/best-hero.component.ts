@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WebHeroesService } from '../../services/web-heroes.service'
 
 @Component({
   selector: 'app-best-hero',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BestHeroComponent implements OnInit {
 
-  constructor() { }
+  bestHero: any;
+
+  constructor(private webApi: WebHeroesService) { }
 
   ngOnInit(): void {
+    this.getBestHero()
   }
 
+  getBestHero() {
+    this.webApi.getHero().subscribe((data) => {
+      this.bestHero = data;
+      console.log(this.bestHero);
+    })
+  }
 }
