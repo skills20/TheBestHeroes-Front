@@ -1,0 +1,18 @@
+.profile-card {
+  max-width: 600px;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  img{
+    flex: 2;
+  }
+  .infocard{
+    flex: 1;
+    margin-left: 30px;
+  }
+}
+
+.profile-header-image {
+  background-image: url('https://simg.nicepng.com/png/small/139-1390669_jpg-black-and-white-library-collection-of-high.png');
+  background-size: cover;
+}

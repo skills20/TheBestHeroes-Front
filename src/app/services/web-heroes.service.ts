@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, Subscriber } from 'rxjs';
 
 @Injectable({
@@ -19,5 +19,9 @@ export class WebHeroesService {
   }
   getHeroes(): Observable<any> {
     return this.http.get<any>(`http://localhost:3000/allHeroes`);
+  }
+  getOneHero(id: string): Observable<any> {
+    let params1 = new HttpParams().set('heroid', id)
+    return this.http.get<any>(`http://localhost:3000/oneHero`, { params: params1 });
   }
 }

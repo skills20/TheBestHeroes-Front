@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PageEvent } from '@angular/material/paginator';
 import { WebHeroesService } from '../../services/web-heroes.service'
+import { MatDialog } from '@angular/material/dialog';
+import { HeroProfileComponent } from '../hero-profile/hero-profile.component';
 
 export interface Heroes {
   id: number;
@@ -20,7 +22,7 @@ export class AllHeroesComponent implements OnInit {
   dataSource: any;
   displayedColumns: string[] = ['id', 'name', 'photo', 'profile'];
 
-  constructor(private webApi: WebHeroesService) { }
+  constructor(private webApi: WebHeroesService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getAllHeroes();
@@ -41,6 +43,9 @@ export class AllHeroesComponent implements OnInit {
       endIndex = this.allHeroes.length;
     }
     this.dataSource = this.allHeroes.slice(startIndex, endIndex);
-    console.log(this.dataSource);
+  }
+
+  openDialog(hero) {
+    const dialogRef = this.dialog.open(HeroProfileComponent, { data: { heroid: hero } });
   }
 }
