@@ -11,11 +11,13 @@ import { BestHeroComponent } from './best-hero/best-hero.component';
 import { MatCardModule } from '@angular/material/card';
 import { WebHeroesService } from '../services/web-heroes.service';
 import { AllHeroesComponent } from './all-heroes/all-heroes.component';
-
-
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatDialog } from '@angular/material/dialog';
+import { HeroProfileComponent } from './hero-profile/hero-profile.component';
 
 @NgModule({
-  declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent],
+  declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent, HeroProfileComponent],
   imports: [
     CommonModule,
     LayoutModule,
@@ -24,7 +26,10 @@ import { AllHeroesComponent } from './all-heroes/all-heroes.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatDialog
   ],
   providers: [WebHeroesService]
 })
