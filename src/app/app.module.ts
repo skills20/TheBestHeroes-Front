@@ -9,6 +9,7 @@ import { MainNavComponent } from './main-view/main-nav/main-nav.component'
 import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +35,8 @@ import { AllHeroesComponent } from './main-view/all-heroes/all-heroes.component'
     MatListModule,
     MatCardModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,6 +12,7 @@ import { MatCardModule } from '@angular/material/card';
 import { WebHeroesService } from '../services/web-heroes.service';
 import { AllHeroesComponent } from './all-heroes/all-heroes.component';
 import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
   declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent],
@@ -24,7 +25,8 @@ import { MatTableModule } from '@angular/material/table';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule,
   ],
   providers: [WebHeroesService]
 })
