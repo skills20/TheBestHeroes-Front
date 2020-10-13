@@ -1,0 +1,60 @@
+<h1 style="text-align: center; margin-top: 20px;">Choose your side</h1>
+<div class="cards-container">
+  <mat-card class="example-card">
+    <img mat-card-image
+      src="https://w2.pngwave.com/png/811/22/326/hero-hero-logo-watercolor-paint-wet-ink-hero-image-cartoon-graffiti-text-png-clip-art.png"
+      alt="Photo of Hero">
+    <mat-card-content>
+      <mat-card-title>Good</mat-card-title>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="getAlignment('good')">Choose</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="example-card">
+    <img mat-card-image src="https://www.pinclipart.com/picdir/middle/109-1094506_anti-hero-anti-hero-png-clipart.png"
+      alt="Photo of Anti-Hero">
+    <mat-card-content>
+      <mat-card-title>Bad</mat-card-title>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent" (click)="getAlignment('bad')">Choose</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<div class="heroes-container" *ngIf="heroes=='good'">
+  <div fxFlex fxLayout="column">
+    <div fxLayout="row wrap">
+      <div fxFlex="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let char of goodGuys"
+        style="padding: 5px">
+        <mat-card>
+          <img mat-card-image src="{{char[2]}}" alt="Hero Photo">
+          <div class="row">
+            <div mat-card-avatar class="hero-logo"></div>
+            <mat-card-title style="font-size: medium;">
+              {{char[1]}}
+            </mat-card-title>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="heroes-container" *ngIf="heroes=='bad'">
+  <div fxFlex fxLayout="column">
+    <div fxLayout="row wrap">
+      <div fxFlex="20" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" fxLayout="column" *ngFor="let char of badGuys"
+        style="padding: 5px">
+        <mat-card>
+          <img mat-card-image src="{{char[2]}}" alt="Hero Photo">
+          <div class="row">
+            <div mat-card-avatar class="villains-logo"></div>
+            <mat-card-title style="font-size: medium;">
+              {{char[1]}}
+            </mat-card-title>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

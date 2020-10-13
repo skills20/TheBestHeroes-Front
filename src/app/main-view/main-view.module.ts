@@ -15,9 +15,10 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatDialog } from '@angular/material/dialog';
 import { HeroProfileComponent } from './hero-profile/hero-profile.component';
+import { AlignmentsComponent } from './alignments/alignments.component';
 
 @NgModule({
-  declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent, HeroProfileComponent],
+  declarations: [MainNavComponent, BestHeroComponent, AllHeroesComponent, HeroProfileComponent, AlignmentsComponent],
   imports: [
     CommonModule,
     LayoutModule,

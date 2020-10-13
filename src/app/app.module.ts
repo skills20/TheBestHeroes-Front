@@ -19,6 +19,8 @@ import { BestHeroComponent } from './main-view/best-hero/best-hero.component';
 import { AllHeroesComponent } from './main-view/all-heroes/all-heroes.component';
 import { HeroProfileComponent } from './main-view/hero-profile/hero-profile.component';
 import { WebHeroesService } from './services/web-heroes.service';
+import { AlignmentsComponent } from './main-view/alignments/alignments.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { WebHeroesService } from './services/web-heroes.service';
     MainNavComponent,
     BestHeroComponent,
     AllHeroesComponent,
-    HeroProfileComponent
+    HeroProfileComponent,
+    AlignmentsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { WebHeroesService } from './services/web-heroes.service';
     MatTableModule,
     MatPaginatorModule,
     MatDialogModule,
-
+    FlexLayoutModule
   ],
   providers: [WebHeroesService],
   bootstrap: [AppComponent]
