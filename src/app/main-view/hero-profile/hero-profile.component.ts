@@ -23,5 +23,4 @@ export class HeroProfileComponent implements OnInit {
       console.log(this.oneHero);
     })
   }
-
 }

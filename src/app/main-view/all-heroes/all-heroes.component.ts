@@ -32,7 +32,6 @@ export class AllHeroesComponent implements OnInit {
     this.webApi.getHeroes().subscribe((data) => {
       this.allHeroes = data;
       this.dataSource = this.allHeroes.slice(0, 5);
-      console.log(this.allHeroes);
     })
   }
 
